@@ -7,7 +7,7 @@ inputs:
     default: '.github/labeler.yml'
 runs:
   using: 'docker'
-  image: 'Dockerfile'
+  image: "ghcr.io/falbrechtskirchinger/labeler:${{ github.ref_name || ('sha-' + github.sha) }}"
 branding:
   icon: award
   color: blue
